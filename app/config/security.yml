@@ -1,0 +1,76 @@
+# To get started with security, check out the documentation:
+# http://symfony.com/doc/current/book/security.html
+security:
+    encoders:
+            #OpiAide\OpiAideBundle\Entity\User: sha512
+            # PBKDF2 encoder
+            # see the note about PBKDF2 below for details on security and speed
+            DroidInfotech\DroidBundle\Entity\User:
+                algorithm:            pbkdf2
+                hash_algorithm:       sha512
+                encode_as_base64:     true
+                iterations:           4096
+                key_length:           40
+    role_hierarchy:
+            ROLE_ADMIN:       ROLE_USER
+            ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]        
+    # http://symfony.com/doc/current/book/security.html#where-do-users-come-from-user-providers
+    providers:
+        user_db:
+            entity: { class: DroidInfotech\DroidBundle\Entity\User, property: email }
+        in_memory:
+            memory: ~
+        
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+            
+        main:
+            anonymous: ~
+            switch_user: true
+        
+        secured_area:
+            # ...
+            pattern: ^/
+            provider: user_db
+#            http_basic:
+#                realm: 'Secured Demo Area'
+#                provider: in_memory
+            form_login: 
+                login_path: login
+                check_path: index
+                
+                #always_use_default_target_path: true
+                #use_referer: true
+            logout:
+                path:   /logout
+                target: / 
+            # activate different ways to authenticate
+
+            #http_basic: ~
+            # http://symfony.com/doc/current/book/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+    access_control:
+        - { path: ^/webservice/*, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        #- { path: ^/checkinuserdata/webservice/* , roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/user/*, roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/events/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/category/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/exhibitor/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/updatepassword/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/adduser/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/maps/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/dashboard/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/survey/mobilesurvey,roles: 'IS_AUTHENTICATED_ANONYMOUSLY' }
+        - { path: ^/survey/intro,roles: 'IS_AUTHENTICATED_ANONYMOUSLY' }
+        - { path: ^/survey/attempted,roles: 'IS_AUTHENTICATED_ANONYMOUSLY' }
+        - { path: ^/survey/*,roles: ['ROLE_ADMIN','ROLE_USER'] }
+        - { path: ^/notification_message/*,roles:['ROLE_ADMIN','ROLE_USER']}
+        - { path: ^/device/*,roles:['ROLE_ADMIN','ROLE_USER']}
+        #path: ^/_internal/secure
+        #allow_if: "'127.0.0.1' == request.getClientIp() or has_role('ROLE_ADMIN')"
+        

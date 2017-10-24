@@ -1,0 +1,104 @@
+droid_infotech_droid:
+    resource: "@DroidInfotechDroidBundle/Controller/"
+    type:     annotation
+    prefix:   /
+check_path:
+    path:     /login
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:index" }
+login_check:
+    path:     /login_check
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:login" }
+logout_check:
+    path: /logout
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:logout" }
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+user_login:
+    path:     /webservice/login
+    defaults: { _controller: "DroidInfotechDroidBundle:User:login" }
+    methods:  [POST]
+user_logout:
+    path:     /webservice/logout
+    defaults: { _controller: "DroidInfotechDroidBundle:User:logout" }
+    methods:  [POST]
+user_register:
+    path:     /webservice/signup
+    defaults: { _controller: "DroidInfotechDroidBundle:User:signup" }
+    methods:  [GET,POST,OPTIONS]    
+user_forgotpassword:
+    path:     /webservice/forgotpassword
+    defaults: { _controller: "DroidInfotechDroidBundle:User:forgot" }
+    methods:  [POST]
+user_changepassword:
+    path:     /webservice/changepassword
+    defaults: { _controller: "DroidInfotechDroidBundle:User:changepassword" }
+    methods:  [POST]
+user_updatepassword:
+    path:     /updatepassword
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:updatePassword" }
+    methods:  [GET,POST]  
+user_adduser:    
+    path:     /adduser
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:addUser" }
+    methods:  [GET,POST]  
+create_password:
+    path:     /createpassword
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:createPassword" }
+    methods:  [GET,POST]     
+create_newPassword:
+    path: /createnewpassword/{userId}
+    defaults: {_controller: "DroidInfotechDroidBundle:Default:createnewPassword"}
+    methods: [GET,POST]
+user_facebooklogin:
+    path:     /webservice/facebookapi
+    defaults: { _controller: "DroidInfotechDroidBundle:User:facebook" }
+    methods:  [POST]    
+event_detail:    
+    path:     /webservice/eventdetail
+    defaults: { _controller: "DroidInfotechDroidBundle:Events:eventList" }
+    methods:  [POST]
+eventlocation_list:    
+    path:     /webservice/eventlocation
+    defaults: { _controller: "DroidInfotechDroidBundle:Events:eventLocation" }
+    methods:  [POST]    
+exhibitor_list:    
+    path:     /webservice/exihibitorlist
+    defaults: { _controller: "DroidInfotechDroidBundle:Exhibitor:exihibitorList" }
+    methods:  [POST]  
+event_exhibitor_list:    
+    path:     /webservice/exihibitorlistforevent
+    defaults: { _controller: "DroidInfotechDroidBundle:Exhibitor:exihibitorListForEvent" }
+    methods:  [POST]  
+exhibitor_detail:    
+    path:     /webservice/exihibitordetail
+    defaults: { _controller: "DroidInfotechDroidBundle:Exhibitor:exihibitorDetail" }
+    methods:  [POST]  
+map_list:    
+    path:     /webservice/maplist
+    defaults: { _controller: "DroidInfotechDroidBundle:Maps:mapList" }
+    methods:  [POST]   
+productcategory_list:    
+    path:     /webservice/productCategory
+    defaults: { _controller: "DroidInfotechDroidBundle:Category:productCategoryList" }
+    methods:  [POST]      
+addUserFavourite :
+    path:     /webservice/addUserFavourite
+    defaults: { _controller: "DroidInfotechDroidBundle:UserFavourite:addUserFavourite" }
+    methods:  [POST]
+UserFavourite_list :
+    path:     /webservice/UserFavouritelist
+    defaults: { _controller: "DroidInfotechDroidBundle:Exhibitor:UserfavouriteList" }
+    methods:  [POST]    
+productcategory_list:    
+    path:     /webservice/productCategory
+    defaults: { _controller: "DroidInfotechDroidBundle:Category:productCategoryList" }
+    methods:  [POST] 
+androidpush_notification:    
+    path:     /androidNotification
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:androidPush" }
+    methods:  [GET] 
+iospush_notification:    
+    path:     /iosNotification
+    defaults: { _controller: "DroidInfotechDroidBundle:Default:iosPush" }
+    methods:  [GET]     

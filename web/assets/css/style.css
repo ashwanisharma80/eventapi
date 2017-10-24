@@ -1,0 +1,534 @@
+/*
+ * Specific styles of signin component
+ */
+/*
+ * General styles
+ */
+body, html {
+    height: 100%;  
+
+
+}
+
+
+
+.btn {
+    font-weight: 700;
+    height: 36px;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+
+
+
+.input-username,
+.input-password
+ {
+    border-radius: 0;
+    margin-top: 15px;
+}
+
+.imgLOck {
+    width: 15px;
+}
+
+.input-group-addon {
+    border:none;
+	background-color: white;
+}
+
+.input-group-addon:first-child {
+    border:none ;
+		background-color: white;
+
+}
+
+.lockSpan {
+    padding: 6px 17px;
+	padding-right:12px;
+}
+
+.form_bg {
+    color: #666;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid #fff;
+    margin: auto;
+    top: -219px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 280px;
+	padding-right:15px;
+	padding-left:15px;
+}
+
+.form-signin
+{
+	 border: 1px solid rgba(188, 188, 188, 1);
+    padding: 50px;
+}
+
+
+.form-signin input[type=email],
+.form-signin input[type=password],
+.form-signin input[type=text],
+.form-signin button,
+
+ {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-control
+{
+			 border:  1px solid rgba(188, 188, 188, 1);
+			 border-left:none;
+			 border-top:none;
+			 border-right:none;
+			 direction: ltr;
+            height: 44px;
+            font-size: 16px;
+
+
+}
+.form-signin .form-control:focus {
+		 
+        border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+.btn.btn-lg {
+    /*background-color: #4d90fe;
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+	width:230px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+	 border:  1px solid rgba(188, 188, 188, 1);
+	 	 margin-left:80px;
+
+}
+
+.btn.btn-sm {
+    /*background-color: #4d90fe;
+    /* background-color: linear-gradient(rgb(104, 145, 162), rgb(12, 97, 33));*/
+    padding: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    height: 36px;
+	width:220px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+	 border:  1px solid rgba(188, 188, 188, 1);
+}
+
+
+.forgot-password {
+    color: rgb(104, 145, 162);
+}
+.checkbox
+{
+margin-left:140px;
+
+}
+
+.loginBottom a {
+    text-decoration: none;
+    color: #515151;
+	margin-left:250px;
+}
+
+/*other*/
+/*.table-responsive {
+    min-height: .01%;
+    overflow-x: visible;
+}
+
+ /*Tablet css: */
+
+/*@media only screen and (max-width: 768px) {
+    .form-signin {
+        padding: 50px;
+		width:100%;
+
+    }
+	    .form_container
+		{
+        width: 100%;
+		border:none;
+    }
+}
+
+
+/* Mobile phones: */
+
+/*@media only screen and (max-width: 480px) {
+    .form_bg {
+        width: 100%;
+    }
+    .mfullWidth{
+        width: 100%;
+    }
+
+
+}
+
+
+
+
+/*--------------------forgot password----------------------*/
+
+.form_bg1 {
+    color: #666;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid #fff;
+    margin: auto;
+    top: -159px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 430px;
+    height: 280px;
+	padding-right:15px;
+	padding-left:15px;
+}
+
+.form-forgot
+{
+	 border: 1px solid rgba(188, 188, 188, 1);
+	 margin:0px;
+}
+.forgot
+{
+	display:table;
+	width:100%;
+	background-color:#9EBFE1;
+
+
+}
+.cls
+{
+	float:left;
+	margin-top:5px;
+	margin-left:5px;
+}
+.form-forgot #inputEmail
+ {
+    direction: ltr;
+    height: 54px;
+    font-size: 16px;
+}
+
+.form-forgot input[type=email],
+.form-forgot input[type=text],
+.form-forgot  button,
+
+ {
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.form-control1
+{
+			 border:  1px solid rgba(188, 188, 188, 1);
+                padding: 10px;
+                 font-weight: 500;
+                font-size: 14px;
+                height: 36px;
+                width: 220px;
+                border-radius: 3px;
+
+
+}
+.form-forgot .form-control:focus {
+		 
+        border-color: rgb(104, 145, 162);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgb(104, 145, 162);
+}
+
+/*-----------------------------------------------Reset-------------------------------------------------*/
+
+.form_bg2 {
+    color: #666;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid #fff;
+    margin: auto;
+    top: -209px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 430px;
+    height: 280px;
+	padding-right:15px;
+	padding-left:15px;
+}
+
+
+/*------------------------------------------------------dashboard-------------------------------------*/
+
+
+body {
+    margin-top: 100px;
+}
+
+@media(min-width:768px) {
+    body {
+        margin-top: 50px;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+}
+
+#page-wrapper {
+    width: 100%;
+    padding: 0;
+    background-color: #fff;
+	
+}
+.container-fluid
+{
+padding-top:50px;
+}
+
+
+.huge {
+    font-size: 50px;
+    line-height: normal;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 225px;
+    }
+
+    #page-wrapper {
+        padding: 50px;
+    }
+}
+
+
+
+
+/* Top Navigation */
+
+.top-nav {
+    padding: 0 15px;
+}
+
+.top-nav>li {
+    display: inline-block;
+    float: left;
+}
+
+.top-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    line-height: 20px;
+    color: #000;
+    font-family: "Impact", Charcoal, sans-serif	;
+}
+
+.top-nav>li>a:hover,
+.top-nav>li>a:focus,
+.top-nav>.open>a,
+.top-nav>.open>a:hover,
+.top-nav>.open>a:focus {
+    background-color: #99D2F2;
+}
+
+.navbar-inverse
+{
+	background-color:#99D2F2;
+	border:none;
+	margin:0px;
+	
+}
+.navbar-brand
+{
+	padding:0px;
+	height:75px;
+	
+}
+
+
+/* Side Navigation */
+
+@media(min-width:768px) {
+    .side-nav {
+        position: fixed;
+        top: 75px;
+        left: 225px;
+        width: 225px;
+        margin-left: -225px;
+        border: none;
+        border-radius: 0;
+        overflow-y: auto;
+        background-color: #FFBFAF;
+        bottom: 0;
+        overflow-x: hidden;
+        padding-bottom: 40px;
+    }
+
+    .side-nav>li>a {
+        width: 225px;
+    }
+
+    .side-nav li a:hover,
+    .side-nav li a:focus {
+        outline: none;
+        background-color:  #CBC6B6 !important;
+		
+    }
+}
+
+.side-nav>li>ul {
+    padding: 0;
+}
+
+.side-nav>li>ul>li>a {
+    display: block;
+    padding: 10px 15px 10px 38px;
+    text-decoration: none;
+    color: #000;
+}
+
+
+.activetab
+{
+	background-color:#CBC6B6;
+}
+
+.navbar-inverse .navbar-nav>li>a
+{
+	color:#000;
+}
+/* Custom Colored Panels */
+
+.huge {
+    font-size: 40px;
+}
+
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green > .panel-heading {
+    color: #000;
+    background-color: #5cb85c;
+}
+.panel-heading
+{
+	border-bottom:1px solid #000;
+}
+
+.panel-green > a {
+    color: #000;
+}
+
+.desgin
+{
+	    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+		font-size:17px;
+
+}
+
+
+#password_new
+{
+     width: 50%;
+     display: inline;
+     margin-bottom: 10px;
+     z-index: 1;
+     position: relative;
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+     font-size: 18px;
+     color: #333;
+     margin-top: 10px;
+	 	margin-left:24px;
+
+}
+
+#password_confirm
+{
+	  width: 50%;
+    display: inline;
+    margin-bottom: 10px;
+    z-index: 1;
+    position: relative;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 18px;
+    color: #333;
+    margin-top: 5px;
+}
+
+#create{
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: #333;
+    width: 100px;
+	margin-left:190px;
+	margin-top:5px;
+}
+
+
+#error_mess,h1
+{
+text-align:center;
+}
+
+.form_bg3
+{
+	 color: #666;
+    border-radius: 10px;
+    position: absolute;
+    border: 1px solid grey;
+    margin: auto;
+    top: -219px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 500px;
+    height: 280px;
+	padding-right:15px;
+	padding-left:15px;
+}
+
+
+

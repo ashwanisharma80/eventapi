@@ -1,0 +1,4 @@
+services:
+#    bonnier_bonier.example:
+#        class: DroidInfotech\DroidBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]
